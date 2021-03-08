@@ -5,7 +5,7 @@ How To Install TensorFlow 1.X for NVIDIA RTX30 GPUs (with CUDA11.1, cudnn8.0.4)
 - Ubuntu 18.04.5
 - CUDA 11.1
 - cuDNN 8.0.4
-- GTX 3090
+- RTX 3090
 - Python 3.6
 - tensorflow-gpu 1.15.0</br>
 ## Step1: Download NVIDIA display driver, nvidia-tensorflow dependency packages, CUDA 11.1 and cuDNN 8.0.4
