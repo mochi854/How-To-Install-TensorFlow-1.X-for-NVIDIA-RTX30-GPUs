@@ -60,4 +60,7 @@ sudo chmod a+x cuda_11.1.0_455.23.05_linux.run
 sudo ./cuda_11.1.0_455.23.05_linux.run
 ```
 3) Type 'accept' on the protocol page
-4) 
+4) Go to the page showing options for installation(closing openGL)
+Options - Driver Options - Do not install any of the OpenGL - related driver files
+
+
