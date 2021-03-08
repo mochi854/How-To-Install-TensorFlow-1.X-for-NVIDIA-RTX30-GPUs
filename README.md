@@ -109,3 +109,10 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
 ```
 output: the version number
+## Step8: Install Anaconda3, and create a virtual environment
+```
+sconda create -n name python=3.6.8
+conda activate name
+```
+## Step9: Install tensorflow
+
