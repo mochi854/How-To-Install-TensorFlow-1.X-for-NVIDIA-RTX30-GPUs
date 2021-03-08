@@ -26,3 +26,12 @@ alias nouveau off
 alias lbm-nouveau off
 ```
  3) Save and exit
+## Step3: Disable the Nouveau kernel driver
+```
+echo options nouveau modeset=0
+sudo update-initramfs -u
+```
+Restart
+```
+sudo reboot
+```
