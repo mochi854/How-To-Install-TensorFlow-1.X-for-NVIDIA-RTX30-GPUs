@@ -69,7 +69,7 @@ Done - Install
 sudo systemctl set-default graphical.target
 sudo reboot
 ```
-To check if the NVIDIA graphics driver was installed successfully.
+&nbsp;&nbsp;To check if the NVIDIA graphics driver was installed successfully.
 ```
 nvidia-smi
 ```
