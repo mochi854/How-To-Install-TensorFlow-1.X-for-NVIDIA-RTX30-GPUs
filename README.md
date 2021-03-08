@@ -13,6 +13,7 @@ How To Install TensorFlow 1.X for NVIDIA RTX30 GPUs (with CUDA11.1, cudnn8.0.4)
 <a href="https://www.nvidia.com/Download/driverResults.aspx/163518/en-us" target="_blank">LINUX X64 (AMD64/EM64T) DISPLAY DRIVER</a><br/>
 <a href="https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run" target="_blank">CUDA 11.1</a><br/>
 <a href="https://developer.nvidia.com/rdp/cudnn-archive" target="_blank">cuDNN 8.0.4</a>
+</br>
 ## Step2: Disable Nouveau nvidia driver on Ubuntu
  1) Open up terminal and enter the following commands:
  ```
@@ -27,6 +28,7 @@ alias nouveau off
 alias lbm-nouveau off
 ```
  3) Save and exit
+</br>
 ## Step3: Disable the Nouveau kernel driver
 ```
 echo options nouveau modeset=0
@@ -40,6 +42,7 @@ If executing the following command does not print anything, the disable of Nouve
 ```
 lsmod | grep nouveau
 ```
+</br>
 ## Step4: Close the GUI and install zhcon(if Chinese garbled codes appears)
 ```
 sudo systemctl set-default multi-user.target
@@ -47,6 +50,7 @@ sudo apt-get install zhcon
 sudo adduser $(whoami) video
 sudo reboot
 ```
+</br>
 ## Step5: Install the graphics driver and CUDA 11.1(using runfile)
 1) Uninstall the old drivers
 ```
@@ -74,6 +78,7 @@ To check if the NVIDIA graphics driver was installed successfully.
 ```
 nvidia-smi
 ```
+</br>
 ## Step6: Configure paths
 1) Open the .bashrc file 
 ```
@@ -97,6 +102,7 @@ nvcc --version
 cat /proc/driver/nvidia/version
 ```
 output: the version number
+</br>
 ## Step7: Install cuDNN 8.0.4
 1) Unzip the cuDNN Library for Linux(x86_64), and open the terminal in the path where the file is located.
 ```
@@ -109,10 +115,12 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
 ```
 output: the version number
+</br>
 ## Step8: Install Anaconda3, and create a virtual environment
 ```
 sconda create -n name python=3.6.8
 conda activate name
 ```
+</br>
 ## Step9: Install tensorflow
 
