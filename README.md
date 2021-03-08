@@ -9,7 +9,7 @@ How To Install TensorFlow 1.X for NVIDIA RTX30 GPUs (with CUDA11.1,cudnn8.0.4)
 - Python 3.6
 - tensorflow-gpu 1.15.0
 
-## Step1: Download NVIDIA display griver, CUDA 11.1 and cuDNN 8.0.4
+## Step1: Download NVIDIA display driver, CUDA 11.1 and cuDNN 8.0.4
 <a href="https://www.nvidia.com/Download/driverResults.aspx/163518/en-us" target="_blank">LINUX X64 (AMD64/EM64T) DISPLAY DRIVER</a><br/>
 <a href="https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run" target="_blank">CUDA 11.1</a><br/>
 <a href="https://developer.nvidia.com/rdp/cudnn-archive" target="_blank">cuDNN 8.0.4</a>
@@ -91,8 +91,21 @@ export PATH="/home/<username>/anaconda3/install/bin:$PATH
 ```
 source ~/. bashrc
 ```
-4) Check for the version of CUDA installed.
+4) Check for the version of CUDA installed
 ```
 nvcc --version
 cat /proc/driver/nvidia/version
 ```
+output: the version number
+## Step7: Install cuDNN 8.0.4
+1) Unzip the cuDNN Library for Linux(x86_64), and open the terminal in the path where the file is located.
+```
+sudo cp cuda/lib64/* /usr/local/cuda/lib64/
+sudo cp cuda/include/* /usr/local/cuda/include/
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+```
+2) Check the cuDNN was configured successfully.
+```
+cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+```
+output: the version number
