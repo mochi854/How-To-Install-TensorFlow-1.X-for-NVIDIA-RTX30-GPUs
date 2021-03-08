@@ -35,3 +35,7 @@ Restart
 ```
 sudo reboot
 ```
+If executing the following command does not print anything, the disable of Nouveau is successful.
+```
+lsmod | grep nouveau
+```
