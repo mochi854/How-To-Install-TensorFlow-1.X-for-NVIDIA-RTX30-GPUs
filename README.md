@@ -18,11 +18,11 @@ How To Install TensorFlow 1.X for NVIDIA RTX30 GPUs (with CUDA11.1,cudnn8.0.4)
  sudo gedit /etc/modprobe.d/blacklist.conf
  ```
  2) Insert follow lines to the blacklist.conf:
- '''
+```
 blacklist nouveau
 blacklist lbm-nouveau
 options nouveau modeset=0
 alias nouveau off
 alias lbm-nouveau off
- '''
+```
  3) Save and exit
