@@ -62,10 +62,14 @@ sudo ./cuda_11.1.0_455.23.05_linux.run
 3) Type 'accept' on the protocol page
 4) Go to the page showing options for installation(closing openGL)</br>
 Options - Driver Options - Do not install any of the OpenGL - related driver files
-![QQ截图20210308165332](https://user-images.githubusercontent.com/50128244/110297950-f3ad3d80-802e-11eb-9782-33f5051c8605.png)
+![QQ截图20210308165332](https://user-images.githubusercontent.com/50128244/110297950-f3ad3d80-802e-11eb-9782-33f5051c8605.png)</br>
 Done - Install
 5) Open the GUI after installation.
 ```
 sudo systemctl set-default graphical.target
 sudo reboot
+```
+To check if the NVIDIA graphics driver was installed successfully.
+```
+nvidia-smi
 ```
