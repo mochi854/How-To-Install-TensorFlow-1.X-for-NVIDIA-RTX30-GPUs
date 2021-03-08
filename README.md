@@ -95,7 +95,7 @@ source ~/. bashrc
 nvcc --version
 cat /proc/driver/nvidia/version
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output: the version number
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OUTPUT: the version number
 ## Step7: Install cuDNN 8.0.4
 1) Unzip the cuDNN Library for Linux(x86_64), and open the terminal in the path where the file is located.
 ```
@@ -107,7 +107,7 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 ```
 cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output: the version number
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OUTPUT: the version number
 ## Step8: Install Anaconda3, and create a virtual environment
 ```
 sconda create -n name python=3.6.8
@@ -118,7 +118,7 @@ conda activate name
 ```
 sh requirements.sh
 ```
-2) Verify that the library file exits
+2) Verify that the library file exits</br>
 ![) X5WE%Q6F~FB7U2BJE{%$2](https://user-images.githubusercontent.com/50128244/110304126-2d357700-8036-11eb-8532-f9b40dca428d.png)
 3) Check if tensorflow-gpu was installed successfully
 ```
