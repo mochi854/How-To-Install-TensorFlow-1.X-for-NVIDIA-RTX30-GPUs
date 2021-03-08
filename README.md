@@ -14,9 +14,9 @@ How To Install TensorFlow 1.X for NVIDIA RTX30 GPUs (with CUDA11.1,cudnn8.0.4)
 <a href="https://developer.nvidia.com/rdp/cudnn-archive" target="_blank">cuDNN 8.0.4</a>
 ## Step2: Disable Nouveau nvidia driver on Ubuntu
  1) Open up terminal and enter the following commands:
- '''
+ ```
  sudo gedit /etc/modprobe.d/blacklist.conf
- '''
+ ```
  2) Insert follow lines to the blacklist.conf:
  '''
 blacklist nouveau
