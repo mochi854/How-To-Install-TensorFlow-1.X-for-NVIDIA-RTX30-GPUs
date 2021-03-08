@@ -73,3 +73,25 @@ To check if the NVIDIA graphics driver was installed successfully.
 ```
 nvidia-smi
 ```
+## Step6: Configure paths
+1) Open the .bashrc file 
+```
+sudo gedit ~/.bashrc
+```
+2) Add paths at the end</br>
+The CUDA path is not added with a version number so that it does not need to be reconfigured when upgrading.
+```
+export CUDA_HOME=/usr/local/cuda
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64
+export PATH=${CUDA_HOME}/bin:${PATH}
+export PATH="/home/<username>/anaconda3/install/bin:$PATH
+```
+3) Save and exit. Preserve.
+```
+source ~/. bashrc
+```
+4) Check for the version of CUDA installed.
+```
+nvcc --version
+cat /proc/driver/nvidia/version
+```
