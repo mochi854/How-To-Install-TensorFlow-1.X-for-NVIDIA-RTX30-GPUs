@@ -39,3 +39,25 @@ If executing the following command does not print anything, the disable of Nouve
 ```
 lsmod | grep nouveau
 ```
+## Step4: Close the GUI and install zhcon(if Chinese garbled codes appears)
+```
+sudo systemctl set-default multi-user.target
+sudo apt-get install zhcon
+sudo adduser $(whoami) video
+sudo reboot
+```
+## Step5: Install the graphics driver and CUDA 11.1(using runfile)
+1) Uninstall the old drivers
+```
+sudo zhcon --utf8
+sudo apt-get remove --purge nvidia*
+sudo apt-get update
+sudo apt-get install dkms build-essential linux-headers-generic
+```
+2) Install cuda_11.1.0_455.23.05_linux.run on Ubuntu
+```
+sudo chmod a+x cuda_11.1.0_455.23.05_linux.run
+sudo ./cuda_11.1.0_455.23.05_linux.run
+```
+3) Type 'accept' on the protocol page
+4) 
